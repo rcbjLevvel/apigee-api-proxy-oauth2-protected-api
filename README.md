@@ -14,13 +14,15 @@ To run this project you will need
 * *Access to an OIDC-compliant third-party IdP.
 
 ### Installing
-1. Clone this repository to a local file system.
-2. Install the apigeetool by running "npm -g install apigeetool".  If npm (Node Package Manager) is not already installed, then this will also need to be installed.
-3. Deploy the API Proxy by running:
+1. Install the [OAuth2 Red Hat SSO (OIDC) Wrapper API Proxy](https://github.com/rcbjLevvel/apigee-api-proxy-oauth2-rh-sso-wrapper) per the instructions found [here](https://github.com/rcbjLevvel/apigee-api-proxy-oauth2-rh-sso-wrapper/blob/master/README.md).
+2. Clone this repository to a local file system.
+3. Install the apigeetool by running "npm -g install apigeetool".  If npm (Node Package Manager) is not already installed, then this will also need to be installed.
+4. Deploy the API Proxy by running:
   ```
 apigeetool deployproxy  -u admin_user_for_org -p admin_password -o apigee_org  -e env_name -n blog-rh-sso-integration -d ${REPOSITORY_HOME}/proxy
   ```
-4. Log into the Apigee Edge Public Cloud console [here](https://enterprise.apigee.com).
+5. Log into the Apigee Edge Public Cloud console [here](https://enterprise.apigee.com).
+6. Install the OAuth2 + OIDC Debugger per the instrucitons found [here]().
 ## Authors
 * **Robert C. Broeckelmann Jr.** - *Initial work*
 
