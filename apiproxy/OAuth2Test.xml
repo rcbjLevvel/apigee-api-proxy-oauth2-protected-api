@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="1" name="OAuth2Test">
+    <Basepaths>/oauth2test</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1514971220086</CreatedAt>
+    <CreatedBy>robert.broeckelmann@rcbjconsulting.com</CreatedBy>
+    <Description></Description>
+    <DisplayName>OAuth2Test</DisplayName>
+    <LastModifiedAt>1514971220086</LastModifiedAt>
+    <LastModifiedBy>robert.broeckelmann@rcbjconsulting.com</LastModifiedBy>
+    <Policies>
+        <Policy>add-cors</Policy>
+        <Policy>remove-header-authorization</Policy>
+        <Policy>verify-oauth-v2-access-token</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources/>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>
