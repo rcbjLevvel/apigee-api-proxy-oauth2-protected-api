@@ -19,7 +19,7 @@ To run this project you will need
 
 ### Installing
 1. Install the [OAuth2 Red Hat SSO (OIDC) Wrapper API Proxy](https://github.com/rcbjLevvel/apigee-api-proxy-oauth2-rh-sso-wrapper) per the instructions found [here](https://github.com/rcbjLevvel/apigee-api-proxy-oauth2-rh-sso-wrapper/blob/master/README.md).
-2. Install the [OAuth2 + OIDC Debugger](https://github.com/GetLevvel/oauth2-oidc-debugger) per the instrucitons found [here](https://github.com/GetLevvel/oauth2-oidc-debugger/blob/master/README.md).
+2. Install and start the [OAuth2 + OIDC Debugger](https://github.com/GetLevvel/oauth2-oidc-debugger) per the instrucitons found [here](https://github.com/GetLevvel/oauth2-oidc-debugger/blob/master/README.md).
 3. Clone this repository to a local file system.
 4. Install the apigeetool by running "npm -g install apigeetool".  If npm (Node Package Manager) is not already installed, then this will also need to be installed.
 5. Deploy the API Proxy by running:
@@ -30,9 +30,15 @@ apigeetool deployproxy  -u admin_user_for_org -p admin_password -o apigee_org  -
 7. Click on the OAuth2Test Proxy link.
 8. Click on the Trace tab.
 9. Click the "Start Trace Session" button.
-10. Obtain an access token for a test client as described in [this](https://github.com/rcbjLevvel/apigee-api-proxy-oauth2-rh-sso-wrapper) post.
-11. 
-
+10. Obtain an access token for a test client as described in [this](https://github.com/rcbjLevvel/apigee-api-proxy-oauth2-rh-sso-wrapper) post. Save this token for the next step.
+11. Run the following the command:
+```
+ curl -X POST https://{ORG}-{ENV}.apigee.net/oauth2test/posts/1 -d '{ "name":"test", "data":"data1"}' --insecure -H "Authorization: Bearer {TOKEN}" -D headers.out
+```
+where 
+  * ORG=your apigee org name
+  * ENV=environment where the proxy is deployed  (test or prod by default)
+  * TOKEN = OAuth2 access token obtained in the last step
 ## Authors
 * **Robert C. Broeckelmann Jr.** - *Initial work*
 
