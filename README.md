@@ -40,7 +40,7 @@ where
   * ENV=environment where the proxy is deployed  (test or prod by default)
   * TOKEN = OAuth2 access token obtained in the last step
 
-If the access token was issued by Apigee, has the proper scope, and the backend token hasn't  timed out, then the proxy should allow the request through.
+If the access token was issued by Apigee and has the proper scope, then the proxy should allow the request through.
 
 ## Authors
 * **Robert C. Broeckelmann Jr.** - *Initial work*
