@@ -1,4 +1,4 @@
-# An Apigee API Proxy that wraps a backend API with Apigee's out-of-the-box OAuth2 implementation
+# An Apigee API Proxy that protects a backend API with Apigee's out-of-the-box OAuth2 implementation
 This API Proxy demonstrates the use of Apigee's OAuth2 access token validation policy.  It is meant to be used with the OAuth2 implmentation provided by [this API Proxy project](https://github.com/rcbjLevvel/apigee-api-proxy-oauth2-rh-sso-wrapper).
 
 It sends requests to the [https://jsonplaceholder.typicode.com](https://jsonplaceholder.typicode.com) API.
